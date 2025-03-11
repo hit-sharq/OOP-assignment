@@ -1,28 +1,22 @@
-# Base class
+# Create a program that includes animals or vehicles with the same action (like move()). However, make each class define move() differently (for example, Car.move() prints "Driving" 🚗, while Plane.move() prints "Flying" ✈️).
+
 class Vehicle:
     def move(self):
         raise NotImplementedError("Subclasses must implement this method")
 
-# Subclass for Car
 class Car(Vehicle):
     def move(self):
         return "Driving 🚗"
-
-# Subclass for Plane
+    def honk(self):
+        return "HONK HONK!"
 class Plane(Vehicle):
     def move(self):
         return "Flying ✈️"
-
-# Subclass for Bicycle
 class Bicycle(Vehicle):
     def move(self):
         return "Pedaling 🚲"
-
-# Function to demonstrate the move action
 def demonstrate_movement(vehicle):
     print(vehicle.move())
-
-# Example usage
 if __name__ == "__main__":
     my_car = Car()
     my_plane = Plane()
